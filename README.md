@@ -1,4 +1,3 @@
-# Memory Game
 # [Memory Game](https://matchtilesgame.netlify.app/)
 ## Description
 
