@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from './button';
 import ReactDOM from "react-dom";
-import './../styles/confirmationModal.scss';
+import './../styles/confirmationModaL.scss';
 
 interface ConfirmationModalProps {
     isOpen: boolean;
