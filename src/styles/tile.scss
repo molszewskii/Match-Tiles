@@ -1,0 +1,144 @@
+.tile {
+    position: relative;
+    width: 85px;
+    height: 115px;
+    cursor: pointer;
+    perspective: 1000px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+
+    .tile-inner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .tile-front,
+    .tile-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 5px;
+    }
+
+    .tile-front {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 162, 0, 1) 100%);
+
+        .tile-logo {
+            width: 50%;
+            height: 40%;
+            object-fit: fill;
+            box-sizing: border-box;
+        }
+    }
+
+    .tile-back {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotateY(180deg);
+
+        .tile-image {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &.flipped .tile-inner {
+        transform: rotateY(180deg);
+    }
+
+    @media (max-width: 480px) {
+        width: 45px;
+        height: 70px;
+
+        .tile-logo {
+            width: 70%;
+            height: auto;
+        }
+
+        .tile-front,
+        .tile-back {
+            border-radius: 3px;
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        width: 50px;
+        height: 75px;
+
+        .tile-logo {
+            width: 70%;
+            height: auto;
+        }
+
+        .tile-front,
+        .tile-back {
+            border-radius: 6px;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        width: 55px;
+        height: 80px;
+
+        .tile-logo {
+            width: 65%;
+            height: auto;
+        }
+
+        .tile-front,
+        .tile-back {
+            border-radius: 8px;
+        }
+    }
+
+    @media (min-width: 1025px) and (max-width: 1440px) {
+        width: 65px;
+        height: 90px;
+
+        .tile-logo {
+            width: 65%;
+            height: auto;
+        }
+
+        .tile-front,
+        .tile-back {
+            border-radius: 8px;
+        }
+    }
+
+    @media (min-width: 1441px) and (max-width: 1920px) {
+        width: 80px;
+        height: 110px;
+
+        .tile-logo {
+            width: 60%;
+            height: auto;
+        }
+    }
+
+    @media (min-width: 1921px) {
+        width: 110px;
+        height: 140px;
+
+        .tile-logo {
+            width: 60%;
+            height: auto;
+        }
+
+        .tile-front,
+        .tile-back {
+            border-radius: 8px;
+        }
+    }
+}
