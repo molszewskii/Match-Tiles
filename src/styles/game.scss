@@ -1,0 +1,73 @@
+.game {
+  flex-grow: 1;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.theme-halloween {
+    background-image: url('./../assets/halloween-background-illustration.jpg');
+  }
+  
+  &.theme-christmas {
+    background-image: url('./../assets/christmas-background-illustration.jpg');
+  }
+
+  .game-cards-container {
+    width: 80%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .game-cards {
+      display: grid;
+      padding: 2rem;
+      gap: 10px;
+      overflow: hidden;
+
+      &.mode-4x3 {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+      
+      &.mode-5x4 {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+      
+      &.mode-6x4 {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+
+      @media (max-width: 480px) {
+        padding: 1.5rem;
+      }
+      
+      @media (min-width: 481px) and (max-width: 768px) {
+        padding: 1.7rem;
+        gap: 13px;
+      }
+      
+      @media (min-width: 769px) and (max-width: 1024px),
+      (min-width: 1025px) and (max-width: 1440px),
+      (min-width: 1441px) and (max-width: 1920px),
+      (min-width: 1921px) {
+        padding: 2rem;
+        gap: 15px;
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    .game-cards-container {
+      width: 90%;
+      height: 90%;
+    }
+  }
+}
