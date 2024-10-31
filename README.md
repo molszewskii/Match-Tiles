@@ -1,5 +1,5 @@
 # Memory Game
-
+# [Memory Game](https://matchtilesgame.netlify.app/)
 ## Description
 
 Memory Game is a fun and interactive game designed to test your memory skills. Players need to match pairs of cards by flipping them over, with the objective of finding all pairs in the least number of moves.
@@ -35,4 +35,4 @@ Start the development server:
    npm run dev
 
 ## Usage
-To play the game, open your browser and navigate to http://localhost:5173/ (or the port specified in your terminal). Click on the cards to flip them and find matching pairs!
+To play the game, open your browser and navigate to [Memory Game](https://matchtilesgame.netlify.app/). Click on the cards to flip them and find matching pairs!
